@@ -82,7 +82,7 @@ Please change into directory `Project_3` first.
 ```console
 $ sudo python3 main.py
 ```
-2. Try sending any TCP/UDP packages in ipv4/ipv6 to the kernel, and observe what is different before and after running `main.py`
+2. Try sending any TCP/UDP packages in ipv4/ipv6 to the kernel, and observe what is different before and after running `main.py`.
 For example:
 ```console
 // for ipv4/TCP packages
@@ -92,9 +92,19 @@ $ nc -4 -l localhost 7999
 $ nc -4 localhost 7999
 <type something here>
 
+// for ipv4/UCP packages
+$ nc -4 -u -l localhost 7999
+<will "not" receive anything>
+
+$ nc -4 -u -l localhost 7998
+<will receive something>
+
+$ nc -4 -u localhost 7999
+<type something here>
+
 // for ipv6/UDP packages
 $ nc -6 -u -l localhost 7999
-<will receive something>
+<will "not" receive anything>
 
 $ nc -6 -u localhost 7999
 <type something here>
