@@ -128,7 +128,7 @@ int kretprobe____x64_sys_read(struct pt_regs *ctx) {
 
   char** bufp = NULL;
   bufp = hookread.lookup(&pid);
-  // bpf_trace_printk("sys_read\\n");
+  bpf_trace_printk("sys_read\\n");
   if (!bufp) {
     return 0;
   }
