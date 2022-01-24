@@ -1,5 +1,6 @@
 # nmlab final
 ### NOTICE: this project is mainly built on `ubuntu 21.10`
+There will be some environmental issue when building on other linux version.
 - [Installing BCC](#installing-bcc)
 - [Project_1](#project_1)
 - [Project_2](#project_2)
