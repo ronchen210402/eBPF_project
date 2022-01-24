@@ -122,7 +122,7 @@ $ make
 ```console
 $ sudo ./bpfKillExecve
 ```
-3. Try to do anything in another terminal. You will see any process who is trying to use `execve syscall` will be killed.
+3. Try to do anything in another terminal. You will see any process who is trying to use `execve syscall` be killed.
 ```console
 $ ls
 Killed
