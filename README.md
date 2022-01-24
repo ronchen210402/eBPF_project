@@ -53,7 +53,7 @@ $ sudo python3 keylog.py
 ```console
 $ sudo tail --follow out.log
 ```
-5. In anothor terminal, try to type some commands. Once you type `sudo` command, you will see that keylogger is recording what you type.
+5. In anothor terminal, try to type some commands. Once you type `sudo` command, you will see that keylogger is recording what you  are typing.
 ```console
 $ sudo ls
 ```
@@ -72,6 +72,8 @@ $ sudo python3 ./is_file.py "<your preferred text here>"
 ```console
 $ cat test
 ```
+### Input size out of buffer
+You may encounter a situation where you enter too many words. In this case, you will receive an error message: `Out of buffer, please make your input size smaller.`
 
 ## Project_3
 Please change into directory `Project_3` first.
@@ -120,7 +122,7 @@ $ make
 ```console
 $ sudo ./bpfKillExecve
 ```
-3. Try to do anything in another terminal. You will see any process who is trying to use execve syscall will be killed.
+3. Try to do anything in another terminal. You will see any process who is trying to use `execve syscall` will be killed.
 ```console
 $ ls
 Killed

