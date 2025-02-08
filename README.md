@@ -1,13 +1,13 @@
-# nmlab final
+# eBPF (extended Berkeley Packet Filter) for Kernel Security and Real-Time Network Management
 ### NOTICE: this project is mainly built on `ubuntu 21.10`
-There will be some environmental issue when building on other linux version.
+There will be some environmental issue when building on other linux versions.
 - [Installing BCC](#installing-bcc)
 - [Project_1](#project_1)
 - [Project_2](#project_2)
 - [Project_3](#project_3)
 - [Project_4](#project_4)
 
-## Installing BCC
+## Installing BCC (BPF Compiler Collection)
 ### Install build dependencies
 ```console
 $ sudo apt install -y bison build-essential cmake flex git libedit-dev libllvm11 llvm-11-dev libclang-11-dev python zlib1g-dev libelf-dev libfl-dev python3-distutils clang-11 libbfd-dev libcap-dev
@@ -27,7 +27,7 @@ $ sudo make install
 $ popd
 ```
 
-## Project_1
+## Project_1: We Got Your Password!
 ### Install [logkeys](https://github.com/kernc/logkeys)
 Please change into directory `Project_1` first.
 ```console
@@ -62,7 +62,7 @@ $ sudo ls
 It is very likely that you will see only some characters recognized. In this case, open `my_lang.keymap` in UTF-8 enabled text editor and manually repair any missing or incorrectly determined mappings.
 
 
-## Project_2
+## Project_2: Insert Anything , Anywhere!
 Please change into directory `Project_2` first.
 ### How to run
 1. Run `is_file.py`.
@@ -76,7 +76,7 @@ $ cat test
 ### Input size out of buffer
 You may encounter a situation where you enter too many words. In this case, you will receive an error message: `Out of buffer, please make your input size smaller.`
 
-## Project_3
+## Project_3: An eBPF-Based Firewall Using XDP
 Please change into directory `Project_3` first.
 ### How to run
 1. Run `main.py`.
@@ -116,7 +116,7 @@ TCP/UDP \ ip ver.|ipv4|ipv6
 TCP to port 7999|pass|drop
 UDP to port 7999|redirect to port 7998| drop
 
-## Project_4
+## Project_4: eBPF-Hooked Command-Line Killer
 Please change into directory `Project_4` first.
 ### Generate binaries
 The binaries will built into `Project_4/src/bin`.
